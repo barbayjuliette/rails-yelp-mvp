@@ -12,6 +12,15 @@
   </head>
 
   <body>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div>
+        <p class="nav-link navbar-brand" style="text-decoration: none"> <%= link_to "Show all restaurants", restaurants_path %></p>
+      </div>
+      <div>
+        <p class="nav-link navbar-brand" style="text-decoration: none"><%= link_to "Create a new restaurant", new_restaurant_path %></p>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
