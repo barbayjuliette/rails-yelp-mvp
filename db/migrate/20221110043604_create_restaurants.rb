@@ -3,7 +3,7 @@ class CreateRestaurants < ActiveRecord::Migration[7.0]
     create_table :restaurants do |t|
       t.string :name, null: false
       t.text :address, null: false
-      t.integer :phone_number
+      t.string :phone_number
       t.string :category, null: false
 
       t.timestamps
