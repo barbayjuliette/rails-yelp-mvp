@@ -50,6 +50,7 @@ body {
 h1 {
   padding-bottom: 30px;
   padding-top: 30px;
+  margin-left: 16px;
 }
 
 .card-image {
@@ -64,4 +65,22 @@ h1 {
 
 .fa-star {
   color: #fdc500 !important;
+}
+
+@media(max-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
