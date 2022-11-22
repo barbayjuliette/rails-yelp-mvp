@@ -1,9 +1,27 @@
-<h1>Restaurants </h1>
+<h1> Find your next hike ...</h1>
 
-<ul>
-<% @restaurants.each do |restaurant| %>
-  <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
-<% end %>
-</ul>
+<div class="cards">
+    <% @restaurants.each do |restaurant| %>
+      <div class="card">
+        <div class ="card-body">
+          <h5 class="card-title"><%= restaurant.name %></h5>
+          <p class="card-text"><i class="fa-solid fa-star"></i></p>
+        </div>
+        <img src="https://lonelyplanetimages.imgix.net/a/g/hi/t/a2aa48e66952bf8816898991072e32f5-macritchie-reservoir.jpg" alt="trail picture">
+        <div class="card-body">
+          <p class="card-text"><i class="fa-regular fa-person-hiking"></i> Intermediate</p>
+          <p class="card-text"><i class="fa-regular fa-timer"></i> 3 hours </p>
+        </div>
+      </div>
+    <% end %>
+</div>
 
-<%= link_to "Create a new restaurant", new_restaurant_path  %>
+<%#
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> %>
